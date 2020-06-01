@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Inc/Calculator.h"
+#include <Calculator/Calculator.h>
 using namespace std;
 
 int Sum(int a, int b)

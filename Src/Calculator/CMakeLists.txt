@@ -3,12 +3,12 @@ m_add_source_group_recursive()
 add_library(Calculator ${sources})
 
 target_include_directories(Calculator PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Inc>
+    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/Inc>
     $<INSTALL_INTERFACE:Inc>
 )
 	
 set_target_properties(Calculator PROPERTIES 
-	PUBLIC_HEADER "Inc/Calculator.h"
+	PUBLIC_HEADER "${CMAKE_SOURCE_DIR}/Inc/Calculator/Calculator.h"
 )
 
 set_target_properties(Calculator PROPERTIES 
