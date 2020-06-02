@@ -1,4 +1,4 @@
-m_add_source_group_recursive()
+m_source_group_recurse(sources)
 
 add_library(Calculator ${sources})
 
@@ -13,7 +13,8 @@ set_target_properties(Calculator PROPERTIES
 
 set_target_properties(Calculator PROPERTIES 
 	VERSION 1.0.0 
-	SOVERSION 1.0.0)
+	SOVERSION 1.0.0
+)
 	
 install(TARGETS Calculator
 	EXPORT Calculator

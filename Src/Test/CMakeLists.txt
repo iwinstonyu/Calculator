@@ -1,9 +1,10 @@
-m_add_source_group_recursive()
+m_source_group_recurse(sources)
 
 add_executable(Test ${sources})
 
 find_package(GTest REQUIRED
-	PATHS ${GTEST_ROOT})
+	PATHS ${GTEST_ROOT}
+)
 	
 #target_include_directories(Test ${CMAKE_SOURCE_DIR}/Inc)
 
