@@ -6,7 +6,7 @@ enable_testing()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_UTILITY_ROOT})
 message("CMAKE_MODULE_PATH: " ${CMAKE_MODULE_PATH})
-include(Common)
+include(WindCommon)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
@@ -17,4 +17,3 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Lib)
 m_set_vs_runtime_mt()
 
 add_subdirectory(Src)
-	

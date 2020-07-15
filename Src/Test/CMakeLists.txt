@@ -5,7 +5,7 @@ add_executable(Test ${sources})
 find_package(GTest REQUIRED
 	PATHS ${GTEST_ROOT}
 )
-	
+
 #target_include_directories(Test ${CMAKE_SOURCE_DIR}/Inc)
 
 target_link_libraries(Test Calculator)

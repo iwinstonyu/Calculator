@@ -1,9 +1,16 @@
 @echo off
 
-if exist Build rd /q /s Build
-mkdir Build
-cd Build
-cmake -DCMAKE_INSTALL_PREFIX=../Install -DGTEST_ROOT=G:/ThirdParty/googletest/Install -DCMAKE_UTILITY_ROOT=E:\GitRepo\CMakeUtility ..
+:rm_distrib_build
+if exist DistribBuild (
+	echo Removing Directory [DistribBuild]
+	rd DistribBuild /q /s
+	timeout 1
+	goto rm_distrib_build
+)
+
+mkdir DistribBuild
+cd DistribBuild
+cmake -DCMAKE_INSTALL_PREFIX=../Install -DGTEST_ROOT=G:\ThirdParty\googletest\release-1.10.0\Visual_Studio_15_2017\Win64\MT\Debug -DCMAKE_UTILITY_ROOT=E:\GitRepo\CMakeUtility -G"Visual Studio 15 2017 Win64" ..
 cmake --build . --config Debug --target install
 
 pause
