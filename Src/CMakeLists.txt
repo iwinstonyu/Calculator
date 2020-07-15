@@ -1,2 +1,3 @@
 add_subdirectory(Calculator)
 add_subdirectory(Test)
+add_subdirectory(SimpleExe)
